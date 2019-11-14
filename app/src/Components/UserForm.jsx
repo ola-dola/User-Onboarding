@@ -79,7 +79,7 @@ const FormWithFormik = withFormik({
 			})
 			.catch(error => {
 				console.log(error.message);
-			});
+		});
 
 	}, 
 
