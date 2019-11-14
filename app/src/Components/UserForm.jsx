@@ -68,11 +68,13 @@ const FormWithFormik = withFormik({
 	}),
 
 	handleSubmit(values, tools) {
-		console.log(tools);
-		
+		// console.log(tools);
+		const list = tools.props.userList;
+		const setList = tools.props.setUserList;
+
 		axios.post('https://reqres.in/api/users', values)
 			.then(response => {
-				console.log(response.data);
+				setList([...list, response.data]);
 				tools.resetForm();
 			})
 			.catch(error => {

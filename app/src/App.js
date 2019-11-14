@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import FormWithFormik from './Components/UserForm';
+import UserContainer from './Components/UserContainer';
 
 function App() {
+  const [userList, setUserList] = useState([]);
+
   return (
     <div className="App">
-
-      <FormWithFormik />
+      <UserContainer userList={userList}/>
+      <FormWithFormik userList={userList} setUserList={setUserList} />
     </div>
   );
 }
