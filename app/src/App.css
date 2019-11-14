@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  border: 1px solid burlywood;
+  background-color: gray;
+  margin: 2rem;
+}
